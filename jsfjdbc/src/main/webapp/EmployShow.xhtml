@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html">
+
+<h:body>
+
+<h:form>
+<h2><h:outputText value="Employ Records"/></h2>
+<h:dataTable value="#{employDAO.showEmployDAO()}" var="e" border="3">
+<h:column>
+   <f:facet name="header">Employ NO</f:facet>
+   <h:outputText value="#{e.empno}"/>
+</h:column>
+<h:column>
+   <f:facet name="header">Employ NO</f:facet>
+   <h:outputText value="#{e.name}"/>
+</h:column>
+<h:column>
+   <f:facet name="header">Employ NO</f:facet>
+   <h:outputText value="#{e.dept}"/>
+</h:column>
+<h:column>
+   <f:facet name="header">Employ NO</f:facet>
+   <h:outputText value="#{e.desig}"/>
+</h:column>
+<h:column>
+   <f:facet name="header">Employ NO</f:facet>
+   <h:outputText value="#{e.basic}"/>
+</h:column>
+<h:column>
+   <f:facet name="header">Update</f:facet>
+   <h:commandButton action ="#{employDAO.searchEmploy(e.empno)}"
+                      value="Update">
+   </h:commandButton>
+   
+</h:column>
+<h:column>
+   <f:facet name="header">Delete</f:facet>
+   <h:commandButton action ="#{employDAO.deleteEmploy(e.empno)}"
+                      value="Delete">
+   </h:commandButton>
+   
+</h:column>
+
+</h:dataTable>
+</h:form>
+</h:body>
+</html>

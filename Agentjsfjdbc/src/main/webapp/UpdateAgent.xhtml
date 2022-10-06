@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html">
+
+<h:body>
+        <h:form>
+        <h2 style="text-align: center" class ="col-sm-4">Edit Your Reacord</h2>
+        <hr/>
+        Agent Id
+        <h:inputText id="agentId" value="#{editAgent.agentId}"/><br/>
+        Agent Name
+         <h:inputText id="name" value="#{editAgent.name}"/><br/>
+         City
+          <h:inputText id="city" value="#{editAgent.city}"/><br/>
+         Gender
+           <h:inputText id="gender" value="#{editAgent.gender}"/><br/>
+          MaritalStatus
+          <h:inputText id="maritalStatus" value="#{editAgent.maritalStatus}"/><br/>
+          Premium
+            <h:inputText id="premium" value="#{editAgent.premium}"/><br/>
+            <h:commandButton value ="Update" action="#{agentDAO.updateAgent(editAgent)}"/>
+        </h:form>
+</h:body>
+</html>
